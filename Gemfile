@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+gem 'rails_12factor', group: :production
+gem 'puma',           group: :production
 gem 'rails', '4.2.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -19,7 +20,6 @@ gem 'bootstrap-material-design'
 gem 'slim-rails'
 gem 'will_paginate'
 
-gem 'puma'
 gem 'figaro'
 
 gem 'aws-sdk', '< 2.0'
