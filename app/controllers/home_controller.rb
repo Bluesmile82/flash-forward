@@ -1,10 +1,17 @@
 class HomeController < ApplicationController
   def index
-    p params["select_topic"]
     if params["select_topic"]
-      render file: "public/select_topic.html.slim"
+      render_select_topic_page
     else
-      render file: "public/home.html.slim", layout: false
+      render_home_page
     end
+  end
+
+  def render_home_page
+    render file: "public/home.html.slim", layout: false
+  end
+
+  def render_select_topic_page
+    render file: "public/select_topic.html.slim"
   end
 end
