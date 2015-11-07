@@ -1,0 +1,53 @@
+.alert.alert-dismissable.alert-success
+  .button.close type="button" data-dismiss="alert"×
+  strong Well done!
+  span  You have successfully started
+  a.alert-link href="javascript:void(0)"  a new Bluesquare app
+
+.panel.panel-bluesquare
+  .panel-heading
+    h1 Bluesquare presents
+  .panel-body
+    h1= t('hello')
+    h4
+      | Don't forget to
+      .btn.btn-bluesquare Boom
+    h2 h2
+    h3 h3
+    h4 h4
+    h5 h5
+    h6 h6
+    a link
+
+.panel.panel-info.shadow-z-2
+  .panel-heading
+    h2 Material reference
+  .panel-body
+    =link_to('Material Boostrap Demos','http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html', target: '_blank', class: "btn btn-info btn-raised")
+    p
+
+      button.btn.btn-fab.btn-raised.btn-primary
+        i.mdi-image-edit
+        .ripple-wrapper
+
+      button.btn.btn-fab.btn-raised.btn-danger
+        i.mdi-action-delete
+        .ripple-wrapper
+
+      button.btn.btn-fab.btn-raised.btn-success
+        i.mdi-action-done
+        .ripple-wrapper
+
+      button.btn.btn-fab.btn-raised.btn-info
+        i.mdi-navigation-arrow-forward
+        .ripple-wrapper
+
+      button.btn.btn-fab.btn-raised.btn-warning
+        i.mdi-content-clear
+        .ripple-wrapper
+
+      button.btn.btn-fab.btn-raised.btn-fab-mini.btn-default
+        i.mdi-content-add
+        .ripple-wrapper
+
+  i.icon.icon-material-favorite

@@ -1,0 +1,92 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-material-design";
+@import "font-awesome";
+@import "fonts";
+@import "variables";
+
+.main{
+  font-family: $secondary-font;
+  padding-top: 5em;
+}
+
+.navbar-header{
+  i{
+    color: white;
+    margin-top: 10px;
+    &:hover{
+      color: lightgrey;
+    }
+  }
+}
+
+h1{
+  font-family: $secondary-font;
+  font-weight: bold;
+}
+
+h2{
+  font-family: $secondary-font;
+}
+
+h3{
+  font-family: $secondary-font;
+}
+
+.navbar-right{
+  margin-right: 20px;
+}
+
+.logo{
+  color:lightgrey;
+  span:hover{
+    color: white;
+  }
+  img{
+    margin-top: -10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.navbar{
+  background-color: $main-color !important;
+  font-family: $main-font;
+  font-weight: bold;
+  font-size: 1.1em;
+
+  strong{
+    color:white;
+  }
+}
+
+.btn{
+  &-bluesquare{
+    color:white !important;
+      background-color: $main-color !important;
+  }
+  &-info{
+      background-color: $secondary-color !important;
+  }
+}
+
+.panel{
+
+  &-bluesquare{
+    .panel-heading{
+      background-color: $main-color;
+    }
+  }
+
+  &-default{
+    .panel-heading{
+      background-color: white;
+    }
+  }
+
+  &-info{
+    .panel-heading{
+      background-color: $secondary-color;
+    }
+  }
+}
