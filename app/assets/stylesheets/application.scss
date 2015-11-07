@@ -4,6 +4,7 @@
 @import "font-awesome";
 @import "fonts";
 @import "variables";
+@import "swiper";
 
 .main{
   font-family: $secondary-font;
@@ -89,9 +90,13 @@ h3{
     }
   }
 }
+.swiper-slide{
+  img{
+    height: 100%;
+  }
+}
 
-
-html, body{
+html, body, .swiper-slide, .swiper-container, .content{
   height: 100%;
 }
 
