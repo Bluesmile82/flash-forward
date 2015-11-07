@@ -22,6 +22,9 @@ gem 'will_paginate'
 gem 'puma'
 gem 'figaro'
 
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

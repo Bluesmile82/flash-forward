@@ -9,3 +9,6 @@
 # production:
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+S3_BUCKET_NAME: "flash-forward"
+AWS_ACCESS_KEY_ID: "AKIAJPFQTAGBBT6XOTIQ"
+AWS_SECRET_ACCESS_KEY: "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"
