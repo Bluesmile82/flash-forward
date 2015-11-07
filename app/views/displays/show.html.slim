@@ -1,8 +1,8 @@
-
 #header
-  h1= "UPLOAD A PIC THAT REMINDS YOU OF #{@category} ON www.msk.be/flashforward"
+  h1.text-center= "UPLOAD A PIC THAT REMINDS YOU OF #{@category.upcase} ON"
+  h2.text-center= "www.msk.be/flashforward"
 
-#sidebar
+#sidebar.text-center
   p explanation
 #slider
   .swiper-container
@@ -11,6 +11,10 @@
         .swiper-slide
            .content
               = image_tag content.picture.url
+
+           - if content.comment != ""
+              #comment
+                 p= content.comment
   .swiper-button-prev
     i.fa.fa-arrow-left
   .swiper-button-next
@@ -21,5 +25,6 @@ javascript:
     spaceBetween: 0,
     autoplay: 5000,
     centeredSlides: true,
-    touchEventsTarget: "container"
+    touchEventsTarget: "container",
+    loop: true
   });
