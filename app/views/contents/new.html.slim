@@ -1,0 +1,10 @@
+h1 Upload your picture
+
+
+= form_for(@content) do |f|
+  div.field
+    = f.label :comment
+    br
+    = f.text_field :comment
+  div.actions
+    = f.submit

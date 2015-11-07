@@ -1,21 +1,18 @@
 Rails.application.routes.draw do
-  get 'content/new'
 
-  get 'content/create'
-
-  get 'content/index'
 
   scope '(:locale)', locale: /fr|en/ do
-    get 'home' => 'page#home'
-    get 'select_topic' => 'page#select_topic'
+    get 'home' => 'pages#home'
+    get 'select_topic' => 'pages#select_topic'
+    get 'thank_you' => 'pages#thank_you'
 
-    resources :content, only: [:new]
+    resources :contents, only: [:new, :create, :index]
 
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
 
     # You can have the root of your site routed with "root"
-    root 'page#home'
+    root 'pages#home'
 
     # Example of regular route:
     #   get 'products/:id' => 'catalog#view'
