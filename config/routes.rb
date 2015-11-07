@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  get 'content/new'
+
+  get 'content/create'
+
+  get 'content/index'
+
   scope '(:locale)', locale: /fr|en/ do
     get 'home' => 'page#home'
     get 'select_topic' => 'page#select_topic'
+
+    resources :content, only: [:new]
 
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
