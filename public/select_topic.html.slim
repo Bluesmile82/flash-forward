@@ -1,12 +1,20 @@
+nav.navbar.navbar-fixed-top role="navigation"
+  div.navbar-container
+    div.navbar-header
+      = link_to :back do
+        i.mdi-hardware-keyboard-arrow-left
+        div.navbar-text
+        p Select your topic
+
+
 = link_to( new_content_path(category: "food")) do
-  p Food
+  = image_tag 'Food.png'
 
 = link_to( new_content_path(category: "family")) do
   = image_tag 'family.jpg'
 
 = link_to( new_content_path(category: "party")) do
-  p "party"
+  = image_tag 'Party.jpg'
 
 = link_to( new_content_path(category: "pet")) do
-  p "pet"
-
+  = image_tag 'Pets.jpg'
