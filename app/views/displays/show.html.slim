@@ -1,0 +1,25 @@
+
+#header
+  h1= "UPLOAD A PIC THAT REMINDS YOU OF #{@category} ON www.msk.be/flashforward"
+
+#sidebar
+  p explanation
+#slider
+  .swiper-container
+    .swiper-wrapper
+      - @contents.each do |content|
+        .swiper-slide
+           .content
+              = image_tag content.picture.url
+  .swiper-button-prev
+    i.fa.fa-arrow-left
+  .swiper-button-next
+    i.fa.fa-arrow-right
+javascript:
+  var mySwiper = new Swiper('.swiper-container', {
+    speed: 100,
+    spaceBetween: 0,
+    autoplay: 5000,
+    centeredSlides: true,
+    touchEventsTarget: "container"
+  });

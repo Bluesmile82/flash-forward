@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  get 'display' => 'displays#show'
 
 
   scope '(:locale)', locale: /fr|en/ do
     get 'home' => 'pages#home'
     get 'select_topic' => 'pages#select_topic'
     get 'thank_you' => 'pages#thank_you'
-
     resources :contents, only: [:new, :create, :index]
 
     # The priority is based upon order of creation: first created -> highest priority.
