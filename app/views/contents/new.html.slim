@@ -6,5 +6,9 @@ h1 Upload your picture
     = f.label :comment
     br
     = f.text_field :comment
+  div.field
+    = f.label :picture
+    br
+    = f.file_field :picture
   div.actions
     = f.submit
