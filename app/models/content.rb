@@ -15,6 +15,7 @@
 #
 
 class Content < ActiveRecord::Base
+  validates :picture, presence: true
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }
 

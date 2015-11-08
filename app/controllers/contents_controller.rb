@@ -7,8 +7,12 @@ class ContentsController < ApplicationController
 
   def create
     @content = Content.new(content_params)
-    @content.save
-    redirect_to thank_you_path
+    if @content.save
+      redirect_to thank_you_path
+    else
+      @alert = "Please upload a picture"
+      render :new
+    end
   end
 
   def index
