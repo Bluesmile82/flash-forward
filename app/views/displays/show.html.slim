@@ -30,7 +30,7 @@ javascript:
   var mySwiper = new Swiper('.swiper-container', {
     speed: 100,
     spaceBetween: 0,
-    autoplay: 5000,
+    autoplay: 10000,
     centeredSlides: true,
     touchEventsTarget: "container",
     initialSlide: actualSlide,
@@ -44,7 +44,7 @@ javascript:
     if( !isNaN(mySwiper.activeIndex) ){
       addOrUpdateUrlParam("actual_slide", mySwiper.activeIndex - 1)
     }
-  }, 5000);
+  }, 10000);
   console.log(actualSlide);
 
   function addOrUpdateUrlParam(name, value){
