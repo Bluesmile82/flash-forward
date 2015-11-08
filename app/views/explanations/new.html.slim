@@ -1,0 +1,19 @@
+div.navbar-text
+  p New Explanation
+
+.form-container
+  = form_for(Explanation.new) do |f|
+    div.field
+      = f.label :category
+      br
+      = f.select :category, options_for_select([["Select One", ""], "family", "food"])
+    div.field
+      = f.label :picture
+      br
+      = f.file_field :picture
+    div.field
+      = f.label :text
+      br
+      = f.text_field :text
+    div.actions
+      = f.submit

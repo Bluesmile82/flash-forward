@@ -7,7 +7,6 @@
   - @explanations.each do |explanation|
       h3= explanation.text
       .text-center= image_tag explanation.picture.url(:medium) if explanation.picture_file_name
-      = "slide = #{@selected_slide}"
 #slider data-actual-slide="#{@selected_slide}"
   .swiper-container
     .swiper-wrapper
@@ -19,10 +18,10 @@
            - if content.comment != ""
               #comment
                  p= content.comment
-  .swiper-button-prev
-    i.fa.fa-arrow-left
-  .swiper-button-next
-    i.fa.fa-arrow-right
+.swiper-button-prev
+  i.fa.fa-3x.fa-arrow-left
+.swiper-button-next
+  i.fa.fa-3x.fa-arrow-right
 = link_to( display_path, category: @category, )
 
 javascript:

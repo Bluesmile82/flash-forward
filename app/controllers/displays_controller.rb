@@ -1,12 +1,5 @@
 class DisplaysController < ApplicationController
 
-  CATEGORIES = {
-    food: "food",
-    pet: "pet",
-    party: "farty",
-    family: "family"
-  }
-
   def show
     display = Display.where(category: params[:category]).first
     @selected_slide = display.last_content_id < Content.last.id ? Content.last.id : params[:actual_slide]
