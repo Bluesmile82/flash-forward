@@ -4,9 +4,8 @@
 
 #sidebar.text-center
   h2 FUN FACTS
-  - @explanations.each do |explanation|
-      h3= explanation.text
-      .text-center= image_tag explanation.picture.url(:medium) if explanation.picture_file_name
+  h3= @explanation.text
+    .text-center= image_tag explanation.picture.url(:medium) if explanation.picture_file_name
 #slider data-actual-slide="#{@selected_slide}"
   .swiper-container
     .swiper-wrapper

@@ -10,6 +10,32 @@ html{
   font-family: "AvenirNextLTPro"
 }
 
+#start-again{
+  padding-left: 25%;
+  a{
+  color: white;
+  }
+}
+
+#thanks{
+  background-color: $main-color;
+  color: white;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 60%;
+  padding-left: 20%;
+  h2{
+    margin-left:-25%;
+  }
+}
+
+
+
+#main-image{
+  img{
+    width:100%;
+  }
+}
 .main{
   font-family: $secondary-font;
   padding-top: 5em;
