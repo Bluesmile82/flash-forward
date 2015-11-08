@@ -1,0 +1,35 @@
+#header
+  h1.text-center= "UPLOAD A PIC THAT REMINDS YOU OF #{@category.upcase} ON"
+  h2.text-center= "www.flash-forward.herokuapp.com"
+
+#sidebar.text-center
+  h2 FUN FACTS
+  - @explanations.each do |explanation|
+      h3= explanation.text
+      .text-center= image_tag explanation.picture.url(:medium) if explanation.picture_file_name
+#slider data-actual-slide="#{@selected_slide}"
+  .swiper-container
+    .swiper-wrapper
+      - @contents.each do |content|
+        .swiper-slide
+           .content
+              = image_tag content.picture.url
+
+           - if content.comment != ""
+              #comment
+                 p= content.comment
+  .swiper-button-prev
+    i.fa.fa-arrow-left
+  .swiper-button-next
+    i.fa.fa-arrow-right
+javascript:
+  var actualSlide = $('#slider').attr("data-actual-slide")
+  var mySwiper = new Swiper('.swiper-container', {
+    speed: 100,
+    spaceBetween: 0,
+    autoplay: 5000,
+    centeredSlides: true,
+    touchEventsTarget: "container",
+    initialSlide: actualSlide,
+    loop: true
+  });

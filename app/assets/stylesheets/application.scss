@@ -4,6 +4,11 @@
 @import "font-awesome";
 @import "fonts";
 @import "variables";
+@import "swiper";
+
+html{
+  font-family: "AvenirNextLTPro"
+}
 
 .main{
   font-family: $secondary-font;
@@ -57,6 +62,19 @@ h3{
   font-color: white;
 }
 
+
+#comment{
+  color:black;
+  font-size: 30px;
+  position: absolute;
+  height: 100px;
+  bottom: 20%;
+  background-color: rgba(255,255,255, 0.7);
+  padding: 20px;
+  border-radius: 20%;
+  margin-left: 100px;
+}
+
 .btn{
   &-bluesquare{
     color:white !important;
@@ -68,7 +86,6 @@ h3{
 }
 
 .panel{
-
   &-bluesquare{
     .panel-heading{
       background-color: $main-color;
@@ -98,3 +115,50 @@ h3{
   }
 
 }
+
+.swiper-slide{
+  img{
+    height: 100%;
+    display:block;
+    margin:auto;
+  }
+}
+
+html, body, .swiper-slide, .swiper-container, .content{
+  height: 100%;
+}
+
+#display{
+  color: white;
+  background-color: $main-color;
+  height: 100%;
+  h1{
+    margin-top: 0px;
+    padding-top: 30px;
+  }
+}
+#header{
+  h1{
+    font-size: 65px;
+  }
+
+  h2{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+}
+
+#sidebar{
+  background-color: $secondary-color;
+  width: 25%;
+  height: 100%;
+  float: right;
+}
+
+#slider{
+  width: 75%;
+  background-color: black;
+  height: 100%;
+}
+
