@@ -7,6 +7,7 @@
   - @explanations.each do |explanation|
       h3= explanation.text
       .text-center= image_tag explanation.picture.url(:medium) if explanation.picture_file_name
+      = "slide = #{@selected_slide}"
 #slider data-actual-slide="#{@selected_slide}"
   .swiper-container
     .swiper-wrapper
@@ -22,6 +23,8 @@
     i.fa.fa-arrow-left
   .swiper-button-next
     i.fa.fa-arrow-right
+= link_to( display_path, category: @category, )
+
 javascript:
   var actualSlide = $('#slider').attr("data-actual-slide")
   var mySwiper = new Swiper('.swiper-container', {
@@ -33,3 +36,30 @@ javascript:
     initialSlide: actualSlide,
     loop: true
   });
+  var actualSlide =
+  setInterval(function(){
+    // var actualSlide = $('#slider').attr("data-actual-slide", mySwiper.activeIndex )
+    var initialPage = location.pathname;
+    console.log( mySwiper.activeIndex - 1 )
+    if( !isNaN(mySwiper.activeIndex) ){
+      addOrUpdateUrlParam("actual_slide", mySwiper.activeIndex - 1)
+    }
+  }, 5000);
+  console.log(actualSlide);
+
+  function addOrUpdateUrlParam(name, value){
+    var href = window.location.href;
+    var regex = new RegExp("[&\\?]" + name + "=");
+    if(regex.test(href))
+    {
+      regex = new RegExp("([&\\?])" + name + "=\\d+");
+      window.location.href = href.replace(regex, "$1" + name + "=" + value);
+    }
+    else
+    {
+      if(href.indexOf("?") > -1)
+        window.location.href = href + "&" + name + "=" + value;
+      else
+        window.location.href = href + "?" + name + "=" + value;
+    }
+  }

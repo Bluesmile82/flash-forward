@@ -9,7 +9,7 @@ class DisplaysController < ApplicationController
 
   def show
     display = Display.where(category: params[:category]).first
-    @selected_content = display.last_content_id < Content.last.id ? Content.last.id : @actual_content
+    @selected_slide = display.last_content_id < Content.last.id ? Content.last.id : params[:actual_slide]
     @category = params[:category]
     @contents = Content.all.where(category: @category)
     @explanations = Explanation.all.where(category: @category).shuffle
