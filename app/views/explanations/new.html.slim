@@ -4,7 +4,7 @@ div.navbar-text
 .form-container
   = form_for(Explanation.new) do |f|
     div.field
-      = f.label :category
+      = f.label :category, class:"form-control"
       br
       = f.select :category, options_for_select([["Select One", ""], "family", "food"])
     div.field

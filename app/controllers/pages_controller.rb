@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-    render file: "public/home.html.slim", layout: false
+    render file: "public/home.html.slim"
   end
 
   def select_topic
