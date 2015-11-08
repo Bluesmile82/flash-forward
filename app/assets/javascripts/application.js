@@ -16,4 +16,3 @@
 //= require bootstrap-material-design
 //= require material-init
 //= require turbolinks
-//= require swiper
