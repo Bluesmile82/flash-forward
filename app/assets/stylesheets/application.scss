@@ -220,3 +220,20 @@ html, body, .swiper-slide, .swiper-container, .content{
 .form-container{
    margin-top: 150px;
 }
+
+.upload_page{
+  height: 100%;
+  background-color:$main-color;
+  h1 {
+    color: white
+  }
+}
+
+.thank_you_page{
+  height: 100%;
+  background-color:$main-color;
+  img {
+    width: 50%;
+    margin-top: 15px;
+  }
+}
