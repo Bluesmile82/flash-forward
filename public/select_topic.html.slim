@@ -6,18 +6,20 @@ nav.navbar.navbar-fixed-top
       div.navbar-text
         p Select your topic
 
-.col-xs-6
-  = link_to( new_content_path(category: "food")) do
-    = image_tag 'bt-food.jpg'
+.topic-button
 
-.col-xs-6
-  = link_to( new_content_path(category: "family")) do
-    = image_tag 'bt-family.jpg'
+  .col-xs-6
+    = link_to( new_content_path(category: "food")) do
+      = image_tag 'bt-food.jpg'
 
-.col-xs-6
-  = link_to( new_content_path(category: "party")) do
-    = image_tag 'bt-party.jpg'
+  .col-xs-6
+    = link_to( new_content_path(category: "family")) do
+      = image_tag 'bt-family.jpg'
 
-.col-xs-6
-  = link_to( new_content_path(category: "pet")) do
-    = image_tag 'bt-pets.jpg'
+  .col-xs-6
+    = link_to( new_content_path(category: "party")) do
+      = image_tag 'bt-party.jpg'
+
+  .col-xs-6
+    = link_to( new_content_path(category: "pet")) do
+      = image_tag 'bt-pets.jpg'

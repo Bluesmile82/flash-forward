@@ -2,6 +2,7 @@ h1 Upload your picture
 
 
 = form_for(@content) do |f|
+  = f.hidden_field :category, value: @category
   div.field
     = f.label :comment
     br
