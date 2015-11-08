@@ -4,7 +4,7 @@
 @import "font-awesome";
 @import "fonts";
 @import "variables";
-@import "swiper";
+
 
 html{
   font-family: "AvenirNextLTPro"
@@ -162,3 +162,6 @@ html, body, .swiper-slide, .swiper-container, .content{
   height: 100%;
 }
 
+.form-container{
+   margin-top: 150px;
+}
