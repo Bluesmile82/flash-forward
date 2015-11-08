@@ -1,12 +1,23 @@
-= link_to( new_content_path(category: "food")) do
-  p Food
+nav.navbar.navbar-fixed-top
+  div.navbar-container
+    div.navbar-header
+      = link_to :back do
+        i.mdi-hardware-keyboard-arrow-left
+      div.navbar-text
+        p Select your topic
 
-= link_to( new_content_path(category: "family")) do
-  = image_tag 'family.jpg'
+.topic-button
 
-= link_to( new_content_path(category: "party")) do
-  p "party"
+  .col-xs-6
+    = link_to( new_content_path(category: "food")) do
+      = image_tag 'bt-food.jpg'
 
-= link_to( new_content_path(category: "pet")) do
-  p "pet"
+  .col-xs-6
+    = link_to( new_content_path(category: "family")) do
+      = image_tag 'bt-family.jpg'
 
+  .col-xs-6
+    = image_tag 'bt-party.jpg'
+
+  .col-xs-6
+    = image_tag 'bt-pets.jpg'
