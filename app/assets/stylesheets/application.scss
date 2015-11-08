@@ -92,7 +92,10 @@ h3{
   font-color: white;
 }
 
-
+#facts{
+  line-height: 1.5em;
+  padding: 10px;
+}
 #comment{
   color:black;
   font-size: 30px;
@@ -114,11 +117,27 @@ h3{
 }
 
 .fa-arrow-right{
+  img{
+    width: 200px;
+    animation: blink 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
   position:absolute;
-  top:55%;
+  top:80%;
   right: 27%;
   z-index: 5;
-
 }
 
 .actions{

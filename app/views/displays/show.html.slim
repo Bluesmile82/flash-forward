@@ -3,8 +3,8 @@
   h2.text-center= "flash-forward.herokuapp.com"
 
 #sidebar.text-center
-  h2 FUN FACTS
-  h3= @explanation.text
+  h1 FUN FACTS
+  h1#facts= @explanation.text
     .text-center= image_tag explanation.picture.url(:medium) if explanation.picture_file_name
 #slider data-actual-slide="#{@selected_slide}"
   .swiper-container
@@ -18,15 +18,13 @@
               #comment
                  p= content.comment
 .swiper-button-prev
-  i.fa.fa-3x.fa-arrow-left
-.swiper-button-next
-  i.fa.fa-3x.fa-arrow-right
+ .fa-arrow-right= image_tag "swipe.png"
 = link_to( display_path, category: @category, )
 
 javascript:
   var actualSlide = $('#slider').attr("data-actual-slide")
   var mySwiper = new Swiper('.swiper-container', {
-    speed: 100,
+    speed: 200,
     spaceBetween: 0,
     autoplay: 10000,
     centeredSlides: true,
@@ -42,7 +40,7 @@ javascript:
     if( !isNaN(mySwiper.activeIndex) ){
       addOrUpdateUrlParam("actual_slide", mySwiper.activeIndex - 1)
     }
-  }, 10000);
+  }, 20000);
   console.log(actualSlide);
 
   function addOrUpdateUrlParam(name, value){

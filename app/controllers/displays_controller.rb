@@ -2,6 +2,7 @@ class DisplaysController < ApplicationController
 
   def show
     display = Display.where(category: params[:category]).first
+    p params[:actual_slide]
     @selected_slide = display.last_content_id < Content.last.id ? Content.last.id : params[:actual_slide]
     @category = params[:category]
     @contents = Content.all.where(category: @category)
