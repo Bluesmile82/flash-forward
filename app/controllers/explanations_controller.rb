@@ -14,6 +14,6 @@ class ExplanationsController < ApplicationController
   private
 
   def explanation_params
-     params.require(:explanation).permit(:comment, :category, :picture)
+     params.require(:explanation).permit(:text, :category, :picture)
   end
 end
