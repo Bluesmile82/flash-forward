@@ -26,6 +26,8 @@ gem 'aws-sdk', '< 2.0'
 gem 'paperclip'
 gem 'annotate'
 gem 'swiper-rails'
+gem 'devise'
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
 
 group :development, :test do
   gem 'byebug'
