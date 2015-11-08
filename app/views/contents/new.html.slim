@@ -1,16 +1,19 @@
-.upload_page
-  h1 Upload your picture
+nav.navbar.navbar-fixed-top
+  div.navbar-container
+    div.navbar-header
+      ul.list-inline
+        li= link_to :back do
+          i.mdi-hardware-keyboard-arrow-left
+        li.text-center UPLOAD YOUR PICTURE
 
-  .form-container
-    = form_for(@content) do |f|
-      = f.hidden_field :category, value: @category
-      div.field
-        = f.label :picture
-        br
-        = f.file_field :picture
-      div.field
-        = f.label :comment
-        br
-        = f.text_field :comment
-      div.actions
-        = f.submit
+.form-container
+  = form_for(@content) do |f|
+    = f.hidden_field :category, value: @category
+    div.field
+      = f.label :picture,"Select a picture from your gallery",  class: "form-control"
+      = f.file_field :picture,  class: "form-control"
+    div.field
+      = f.label :comment,"If you wish, add a comment to your picture",  class: "form-control"
+      = f.text_field :comment,  class: "form-control"
+    div.actions
+      = f.submit "Upload", class: "btn btn-primary"
