@@ -18,7 +18,6 @@ gem "font-awesome-rails"
 gem 'bootstrap-material-design'
 
 gem 'slim-rails'
-gem 'will_paginate'
 
 gem 'figaro'
 
