@@ -6,14 +6,15 @@ nav.navbar.navbar-fixed-top
           i.mdi-hardware-keyboard-arrow-left
         li.text-center UPLOAD YOUR PICTURE
 
-.form-container
+.form-container#form-content
   = form_for(@content) do |f|
     = f.hidden_field :category, value: @category
     div.field
-      = f.label :picture,"Select a picture from your gallery",  class: "form-control"
-      = f.file_field :picture,  class: "form-control"
+      = f.label :picture,"Select a picture from your gallery:",  class: "form-control"
+      = f.file_field :picture, class: "form-control"
+    br
     div.field
-      = f.label :comment,"If you wish, add a comment to your picture",  class: "form-control"
-      = f.text_field :comment,  class: "form-control"
+      = f.label :comment,"Add a comment if you wish:",  class: "form-control"
+      = f.text_field :comment, placeholder: "Eg. My family eating ice cream!",  class: "form-control"
     div.actions
-      = f.submit "Upload", class: "btn btn-primary"
+      = f.submit "Upload", class: "btn btn-flash"
